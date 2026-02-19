@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>330 | İletişim & SSS</title>
+    <meta name="description" content="Hesap satışı, iletişim kuralları ve sıkça sorulan sorular.">
+    
+    <meta property="og:title" content="330 | İletişim & SSS">
+    <meta property="og:description" content="Selam demeden önce burayı oku! Zaman kıymetlidir.">
+    <meta property="og:image" content="https://github.com/330.png"> <meta property="og:url" content="https://330.github.io">
+    <meta name="theme-color" content="#3498db"> <link rel="icon" type="image/png" href="https://github.com/330.png">
+
     <style>
         :root { --blue: #3498db; --bg: #121212; --card: #1e1e1e; --text: #e0e0e0; --subtext: #aaaaaa; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; display: flex; justify-content: center; padding: 20px; margin: 0; }
@@ -19,11 +27,19 @@
         .wrong { color: #ff4757; text-decoration: line-through; opacity: 0.7; }
         .right { color: #2ed573; font-weight: bold; }
         footer { text-align: center; font-size: 0.8rem; color: var(--subtext); margin-top: 40px; }
+        
+        /* Profil Resmi Stili */
+        .profile-header { text-align: center; margin-bottom: 20px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--blue); }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <div class="profile-header">
+        <img src="https://github.com/330.png" alt="330 Profile" class="profile-img">
+    </div>
+
     <h1>İletişim Kuralları & SSS</h1>
 
     <div class="section">
@@ -44,12 +60,12 @@
         
         <div class="qa">
             <span class="q">❌ Yanlış / Wrong:</span>
-            <span class="a class="wrong"">"Selam", "Orada mısın?", "Bir şey sorabilir miyim?", "Yardım lazım."</span>
+            <span class="a" style="color: #ff4757; text-decoration: line-through; opacity: 0.7;">"Selam", "Orada mısın?", "Bir şey sorabilir miyim?", "Yardım lazım."</span>
         </div>
         
         <div class="qa">
             <span class="q">✅ Doğru / Right:</span>
-            <span class="a class="right">"Selam, [Sunucu Adı] ile ilgili [Hata Mesajı] hatasını alıyorum, yardımcı olabilir misin?"</span>
+            <span class="a" style="color: #2ed573; font-weight: bold;">"Selam, [Sunucu Adı] ile ilgili [Hata Mesajı] hatasını alıyorum, yardımcı olabilir misin?"</span>
         </div>
 
         <div class="qa" style="margin-top: 15px; background: #252525; padding: 10px; border-radius: 5px;">
