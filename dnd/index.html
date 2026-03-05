@@ -3,97 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kedi | İletişim & SSS</title>
     
-    <title>330 | İletişim & SSS</title>
-    <meta name="description" content="Hesap satışı, iletişim kuralları ve sıkça sorulan sorular.">
-    
-    <meta property="og:title" content="330 | İletişim & SSS">
-    <meta property="og:description" content="Selam demeden önce burayı oku! Zaman kıymetlidir.">
-    <meta property="og:image" content="https://github.com/330.png"> <meta property="og:url" content="https://330.github.io">
-    <meta name="theme-color" content="#3498db"> <link rel="icon" type="image/png" href="https://github.com/330.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="kedi | İletişim & SSS">
+    <meta property="og:description" content="Selam demeden önce burayı oku! Zaman kıymetlidir. ✨">
+    <meta property="og:image" content="https://kedi.is-serious.business/qzQX1GY.png">
+    <meta name="theme-color" content="#080808">
+    <link rel="icon" type="image/png" href="https://kedi.is-serious.business/qzQX1GY.png">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --blue: #3498db; --bg: #121212; --card: #1e1e1e; --text: #e0e0e0; --subtext: #aaaaaa; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; display: flex; justify-content: center; padding: 20px; margin: 0; }
-        .container { max-width: 800px; width: 100%; }
-        h1 { color: var(--blue); border-bottom: 2px solid var(--blue); padding-bottom: 10px; text-align: center; }
-        h2 { font-size: 1.2rem; color: #fff; margin-top: 30px; border-left: 4px solid var(--blue); padding-left: 10px; }
-        .section { background: var(--card); padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .qa { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #333; }
-        .qa:last-child { border: none; }
-        .q { font-weight: bold; color: #ffffff; display: block; margin-bottom: 5px; }
-        .a { color: var(--subtext); font-size: 0.95rem; }
-        .badge { font-size: 0.7em; background: #333; padding: 2px 6px; border-radius: 4px; color: var(--blue); margin-right: 8px; vertical-align: middle; }
-        .wrong { color: #ff4757; text-decoration: line-through; opacity: 0.7; }
-        .right { color: #2ed573; font-weight: bold; }
-        footer { text-align: center; font-size: 0.8rem; color: var(--subtext); margin-top: 40px; }
-        
-        /* Profil Resmi Stili */
-        .profile-header { text-align: center; margin-bottom: 20px; }
-        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--blue); }
+        body { background-color: #080808; color: #ededed; font-family: 'Inter', sans-serif; }
+        .bento-card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
+        .bento-card:hover { border-color: #333; background: #141414; }
+        .text-gradient { background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .status-badge { font-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest; }
     </style>
 </head>
-<body>
+<body class="flex justify-center items-start py-12 px-4 min-h-screen">
 
-<div class="container">
-    <div class="profile-header">
-        <img src="https://github.com/330.png" alt="330 Profile" class="profile-img">
-    </div>
-
-    <h1>İletişim Kuralları & SSS</h1>
-
-    <div class="section">
-        <h2>Genel Bilgiler / General Info</h2>
-        <div class="qa">
-            <span class="q"><span class="badge">TR</span>Hesabını satıyor musun?</span>
-            <span class="a">Hayır, hiçbir hesabım satılık değildir.</span>
-        </div>
-        <div class="qa">
-            <span class="q"><span class="badge">EN</span>Are you selling your account?</span>
-            <span class="a">No, none of my accounts are for sale.</span>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Doğru Soru Sorma Rehberi / How to Ask</h2>
-        <p style="font-size: 0.9rem; color: var(--subtext);">Zaman kıymetlidir, lütfen doğrudan konuya girin. / Time is precious, please get straight to the point.</p>
+    <div class="w-full max-w-3xl space-y-6">
         
-        <div class="qa">
-            <span class="q">❌ Yanlış / Wrong:</span>
-            <span class="a" style="color: #ff4757; text-decoration: line-through; opacity: 0.7;">"Selam", "Orada mısın?", "Bir şey sorabilir miyim?", "Yardım lazım."</span>
-        </div>
-        
-        <div class="qa">
-            <span class="q">✅ Doğru / Right:</span>
-            <span class="a" style="color: #2ed573; font-weight: bold;">"Selam, [Sunucu Adı] ile ilgili [Hata Mesajı] hatasını alıyorum, yardımcı olabilir misin?"</span>
+        <div class="bento-card flex flex-col items-center text-center gap-4">
+            <img src="https://kedi.is-serious.business/58T12dn.png" class="w-24 h-24 rounded-full border-4 border-black shadow-2xl">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tighter text-white">İletişim & SSS</h1>
+                <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-bold">Be direct, clear, and concise.</p>
+            </div>
         </div>
 
-        <div class="qa" style="margin-top: 15px; background: #252525; padding: 10px; border-radius: 5px;">
-            <span class="a">
-                <strong>Neden? / Why?</strong><br>
-                Sadece "Selam" yazıp beklerseniz, ben görene kadar saatler geçebilir. Sorunuzu en başta net bir şekilde yazarsanız, gördüğüm an cevabı iletebilirim.
-                <br><br>
-                If you just say "Hi", it might take hours for me to reply. If you state your problem clearly from the start, I can help you immediately.
-            </span>
+        <div class="bento-card">
+            <h2 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-1 h-6 bg-blue-500 rounded-full"></span> Genel Bilgiler / Info
+            </h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-white/[0.02] rounded-xl border border-white/5">
+                    <p class="text-xs font-bold text-blue-400 mb-1">TR • Hesabını satıyor musun?</p>
+                    <p class="text-slate-400 text-sm">Hayır, hiçbir hesabım satılık değildir.</p>
+                </div>
+                <div class="p-4 bg-white/[0.02] rounded-xl border border-white/5">
+                    <p class="text-xs font-bold text-blue-400 mb-1">EN • Are you selling your account?</p>
+                    <p class="text-slate-400 text-sm">No, none of my accounts are for sale.</p>
+                </div>
+            </div>
         </div>
+
+        <div class="bento-card">
+            <h2 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-1 h-6 bg-green-500 rounded-full"></span> Doğru Soru Sorma / How to Ask
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 bg-red-500/5 rounded-xl border border-red-500/10 text-center">
+                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">❌ Wrong</span>
+                    <p class="text-slate-500 text-sm mt-2 italic">"Selam", "Yardım lazım", "Orada mısın?"</p>
+                </div>
+                <div class="p-4 bg-green-500/5 rounded-xl border border-green-500/10 text-center">
+                    <span class="text-xs font-bold text-green-400 uppercase tracking-widest">✅ Right</span>
+                    <p class="text-white text-sm mt-2 font-medium">Doğrudan konuyu ve aldığınız hatayı belirtin.</p>
+                </div>
+            </div>
+            <div class="mt-4 p-4 bg-white/[0.02] rounded-xl border border-white/5 text-xs text-slate-500 leading-relaxed">
+                <strong>Neden?</strong> Sadece "Selam" yazıp beklerseniz, ben görene kadar saatler geçebilir. Sorunuzu en başta net bir şekilde yazarsanız, gördüğüm an cevabı iletebilirim.
+            </div>
+        </div>
+
+        <div class="bento-card">
+            <h2 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-1 h-6 bg-purple-500 rounded-full"></span> Araştırma & DM
+            </h2>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3 p-3">
+                    <span class="text-purple-400 mt-1">●</span>
+                    <p class="text-sm text-slate-400"><strong class="text-white">Araştırın:</strong> Bana yazmadan önce Google kullanın. Çoğu cevap internette mevcut.</p>
+                </div>
+                <div class="flex items-start gap-3 p-3">
+                    <span class="text-purple-400 mt-1">●</span>
+                    <p class="text-sm text-slate-400"><strong class="text-white">Gereksiz DM:</strong> Genel sorunlar için sunucu kanallarını kullanın.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center py-6">
+            <a href="/" class="text-xs font-bold text-slate-600 hover:text-white transition uppercase tracking-widest">← Back to Space</a>
+            <p class="text-[10px] text-slate-800 mt-4 uppercase">© 2026 kedi | Built with love</p>
+        </footer>
+
     </div>
-
-    <div class="section">
-        <h2>DM & Araştırma / DM & Research</h2>
-        <div class="qa">
-            <span class="q">Önce Araştırın / Research First:</span>
-            <span class="a">Bana yazmadan önce Google veya Discord arama özelliğini kullandığınızdan emin olun. Çoğu cevap zaten bir yerlerde yazıyor.</span>
-        </div>
-        <div class="qa">
-            <span class="q">Gereksiz DM'den Kaçının / Avoid Unnecessary DMs:</span>
-            <span class="a">Genel sorunlar için sunucu kanallarını kullanın. Böylece başkaları da cevaptan faydalanabilir.</span>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 - 330.github.io | "Be direct, clear, and concise."
-    </footer>
-</div>
 
 </body>
 </html>
