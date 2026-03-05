@@ -20,7 +20,6 @@
         .bento-card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
         .bento-card:hover { border-color: #333; background: #141414; }
         .text-gradient { background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .status-badge { font-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest; }
     </style>
 </head>
 <body class="flex justify-center items-start py-12 px-4 min-h-screen">
@@ -37,7 +36,7 @@
 
         <div class="bento-card">
             <h2 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                <span class="w-1 h-6 bg-blue-500 rounded-full"></span> Genel Bilgiler / Info
+                <span class="w-1 h-6 bg-blue-500 rounded-full"></span> Genel Bilgiler / General Info
             </h2>
             <div class="space-y-4">
                 <div class="p-4 bg-white/[0.02] rounded-xl border border-white/5">
@@ -57,31 +56,43 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="p-4 bg-red-500/5 rounded-xl border border-red-500/10 text-center">
-                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">❌ Wrong</span>
+                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">❌ WRONG</span>
                     <p class="text-slate-500 text-sm mt-2 italic">"Selam", "Yardım lazım", "Orada mısın?"</p>
                 </div>
-                <div class="p-4 bg-green-500/5 rounded-xl border border-green-500/10 text-center">
-                    <span class="text-xs font-bold text-green-400 uppercase tracking-widest">✅ Right</span>
-                    <p class="text-white text-sm mt-2 font-medium">Doğrudan konuyu ve aldığınız hatayı belirtin.</p>
+                <div class="p-4 bg-green-500/5 rounded-xl border border-green-500/10 text-center flex flex-col justify-center">
+                    <span class="text-xs font-bold text-green-400 uppercase tracking-widest">✅ RIGHT</span>
+                    <p class="text-white text-sm mt-2 font-medium">Doğrudan konuyu belirtin.</p>
+                    <p class="text-slate-400 text-[11px]">State your issue directly.</p>
                 </div>
             </div>
-            <div class="mt-4 p-4 bg-white/[0.02] rounded-xl border border-white/5 text-xs text-slate-500 leading-relaxed">
-                <strong>Neden?</strong> Sadece "Selam" yazıp beklerseniz, ben görene kadar saatler geçebilir. Sorunuzu en başta net bir şekilde yazarsanız, gördüğüm an cevabı iletebilirim.
+            <div class="mt-4 p-4 bg-white/[0.02] rounded-xl border border-white/5 text-xs text-slate-500 leading-relaxed space-y-2">
+                <p><strong>Neden?</strong> Sadece "Selam" yazıp beklerseniz, ben görene kadar saatler geçebilir. Sorunuzu en başta net bir şekilde yazarsanız, gördüğüm an cevabı iletebilirim.</p>
+                <p><strong>Why?</strong> If you just say "Hi" and wait, it might take hours before I see it. If you state your question clearly from the start, I can respond as soon as I'm online.</p>
             </div>
         </div>
 
         <div class="bento-card">
             <h2 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                <span class="w-1 h-6 bg-purple-500 rounded-full"></span> Araştırma & DM
+                <span class="w-1 h-6 bg-purple-500 rounded-full"></span> Araştırma & DM / Research & DM
             </h2>
             <div class="space-y-3">
-                <div class="flex items-start gap-3 p-3">
-                    <span class="text-purple-400 mt-1">●</span>
-                    <p class="text-sm text-slate-400"><strong class="text-white">Araştırın:</strong> Bana yazmadan önce Google kullanın. Çoğu cevap internette mevcut.</p>
+                <div class="p-4 bg-white/[0.02] rounded-xl border border-white/5">
+                    <div class="flex items-start gap-3">
+                        <span class="text-purple-400 mt-1">●</span>
+                        <div>
+                            <p class="text-sm text-slate-400"><strong class="text-white">Araştırın:</strong> Bana yazmadan önce Google kullanın. Çoğu cevap internette mevcut.</p>
+                            <p class="text-xs text-slate-500 mt-1"><strong class="text-slate-300">Research:</strong> Use Google before messaging me. Most answers are available online.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start gap-3 p-3">
-                    <span class="text-purple-400 mt-1">●</span>
-                    <p class="text-sm text-slate-400"><strong class="text-white">Gereksiz DM:</strong> Genel sorunlar için sunucu kanallarını kullanın.</p>
+                <div class="p-4 bg-white/[0.02] rounded-xl border border-white/5">
+                    <div class="flex items-start gap-3">
+                        <span class="text-purple-400 mt-1">●</span>
+                        <div>
+                            <p class="text-sm text-slate-400"><strong class="text-white">Gereksiz DM:</strong> Genel sorunlar için sunucu kanallarını kullanın.</p>
+                            <p class="text-xs text-slate-500 mt-1"><strong class="text-slate-300">Unnecessary DM:</strong> Use server channels for general issues.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
