@@ -1,79 +1,116 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kvdi | dnd</title>
+    <title>kvdi | space</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Inter', sans-serif; }
-        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; }
-        .btn { transition: 0.2s ease; opacity: 0.8; border: 1px solid #30363d; }
-        .btn:hover { opacity: 1; background-color: #21262d; transform: translateY(-2px); }
+        body { background-color: #080808; color: #ededed; font-family: 'Inter', sans-serif; }
+        .bento-card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
+        .bento-card:hover { border-color: #333; background: #141414; }
+        .status-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #111; }
+        .text-gradient { background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-6">
+<body class="flex justify-center items-start py-12 px-4 min-h-screen">
 
-    <div class="w-full max-w-xs">
-        <div class="text-center mb-8">
-            <h1 class="text-2xl font-bold text-white tracking-tight">kvdi</h1>
-            <p class="text-slate-500 text-xs mt-1 italic">just thinking</p>
-        </div>
-
-        <div class="card p-4 mb-8 flex items-center gap-4">
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <div class="md:col-span-2 bento-card flex flex-col md:flex-row items-center gap-8">
             <div class="relative">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-slate-400">K</div>
-                <div id="status-dot" class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full border-2 border-[#161b22] bg-gray-500"></div>
+                <img src="https://image_9dc901.jpg" class="w-32 h-32 rounded-full border-4 border-black object-cover shadow-2xl">
+                <div id="status-indicator" class="absolute bottom-2 right-2 status-dot bg-gray-500"></div>
             </div>
-            <div class="overflow-hidden">
-                <p id="discord-activity" class="text-sm font-semibold text-white truncate text-ellipsis">Yükleniyor...</p>
-                <p class="text-[10px] text-slate-500 uppercase tracking-widest">Discord</p>
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <h1 class="text-4xl font-extrabold tracking-tighter text-white">kvdi</h1>
+                    <span id="status-text" class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest">Checking...</span>
+                </div>
+                <p class="text-slate-400 mt-3 text-base leading-relaxed">
+                    Just a <span class="text-white font-semibold">dreamer</span> wandering through the digital space. ✨ <br>
+                    Spreading <span class="text-pink-400">good vibes</span> and creating aesthetic things with love.
+                </p>
+                <div class="mt-5 flex gap-3 justify-center md:justify-start">
+                    <a href="/dnd" class="bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full hover:scale-105 transition shadow-lg">Contact Me</a>
+                </div>
             </div>
         </div>
 
-        <div class="space-y-3">
-            <a href="https://discord.com/users/377152186234437633" target="_blank" class="card btn p-3 flex items-center justify-center gap-2">
-                <span class="text-sm font-medium">Discord</span>
-            </a>
-            <a href="https://pinterest.com/k9d1" target="_blank" class="card btn p-3 flex items-center justify-center gap-2">
-                <span class="text-sm font-medium">Pinterest</span>
-            </a>
-            <a href="https://github.com/330" target="_blank" class="card btn p-3 flex items-center justify-center gap-2">
-                <span class="text-sm font-medium">GitHub</span>
-            </a>
+        <div class="bento-card flex flex-col justify-between">
+            <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Socials</h3>
+            <div class="space-y-4">
+                <a href="https://x.com/shininglikehell" target="_blank" class="flex items-center justify-between group">
+                    <span class="text-sm font-semibold group-hover:text-blue-400 transition">X / Twitter</span>
+                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                </a>
+                <a href="https://pinterest.com/k9d1" target="_blank" class="flex items-center justify-between group">
+                    <span class="text-sm font-semibold group-hover:text-red-500 transition">Pinterest</span>
+                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                </a>
+                <a href="https://github.com/330" target="_blank" class="flex items-center justify-between group">
+                    <span class="text-sm font-semibold group-hover:text-purple-400 transition">GitHub</span>
+                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                </a>
+                <a href="https://discord.com/users/377152186234437633" target="_blank" class="flex items-center justify-between group">
+                    <span class="text-sm font-semibold group-hover:text-[#5865F2] transition">Discord</span>
+                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                </a>
+            </div>
         </div>
 
-        <div class="text-center mt-12">
-            <p class="text-[9px] text-slate-700 tracking-[0.3em]">KVDI.SPACE</p>
+        <div class="md:col-span-3 bento-card">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest">Listening Experience</h3>
+                <a href="http://spotify.com/0" target="_blank" class="text-[10px] text-[#1DB954] font-bold hover:underline">OPEN SPOTIFY</a>
+            </div>
+            <div id="spotify-container">
+                <div class="bg-white/[0.02] p-6 rounded-3xl flex items-center justify-center border border-white/5">
+                    <p class="text-sm text-slate-600 italic">Not listening to anything right now...</p>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <script>
-        const userID = "377152186234437633"; // Kendi Discord ID'ni buraya yaz!
-        async function updateStatus() {
+        const userID = "377152186234437633";
+        async function fetchPresence() {
             try {
                 const r = await fetch(`https://api.lanyard.rest/v1/users/${userID}`);
-                const d = await r.json();
-                const data = d.data;
+                const { data } = await r.json();
                 
-                // Durum Noktası Renkleri
-                const dot = document.getElementById('status-dot');
+                const indicator = document.getElementById('status-indicator');
+                const statusText = document.getElementById('status-text');
                 const colors = { online: 'bg-green-500', idle: 'bg-yellow-500', dnd: 'bg-red-500', offline: 'bg-gray-500' };
-                dot.className = `absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full border-2 border-[#161b22] ${colors[data.discord_status]}`;
+                
+                indicator.className = `absolute bottom-2 right-2 status-dot ${colors[data.discord_status] || 'bg-gray-500'}`;
+                statusText.innerText = data.discord_status;
 
-                // Aktivite Metni
-                const act = document.getElementById('discord-activity');
+                const spotifyContainer = document.getElementById('spotify-container');
                 if (data.listening_to_spotify) {
-                    act.innerText = `Spotify: ${data.spotify.song}`;
-                } else if (data.activities.length > 0) {
-                    act.innerText = data.activities[0].name;
+                    spotifyContainer.innerHTML = `
+                        <div class="bg-[#1DB954]/5 p-4 rounded-2xl flex items-center gap-5 border border-[#1DB954]/20 animate-in fade-in duration-500">
+                            <img src="${data.spotify.album_art_url}" class="w-20 h-20 rounded-xl shadow-lg">
+                            <div class="overflow-hidden">
+                                <p class="text-[10px] text-[#1DB954] font-black uppercase tracking-widest mb-1">Playing Now</p>
+                                <p class="text-xl font-bold text-white truncate">${data.spotify.track}</p>
+                                <p class="text-sm text-slate-400 truncate">by ${data.spotify.artist}</p>
+                            </div>
+                        </div>
+                    `;
                 } else {
-                    act.innerText = data.discord_status.toUpperCase();
+                    spotifyContainer.innerHTML = `
+                        <div class="bg-white/[0.02] p-6 rounded-3xl flex items-center justify-center border border-white/5">
+                            <p class="text-sm text-slate-600 italic">Not listening to anything right now...</p>
+                        </div>
+                    `;
                 }
-            } catch (e) { console.error("Lanyard error"); }
+            } catch (e) { console.error("Lanyard error", e); }
         }
-        updateStatus();
-        setInterval(updateStatus, 15000);
+        fetchPresence();
+        setInterval(fetchPresence, 10000);
     </script>
 </body>
 </html>
