@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta property="og:type" content="website">
-<meta property="og:title" content="kedi">
-<meta property="og:description" content="Just a dreamer wandering through the digital space. ✨">
-<meta property="og:url" content="https://kvdi.space">
-<meta property="og:image" content="https://kedi.is-serious.business/9gGwcJT.png">
-<meta name="theme-color" content="#080808">
-<meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="kedi">
+    <meta property="og:description" content="Just a dreamer wandering through the digital space. ✨">
+    <meta property="og:url" content="https://kvdi.space">
+    <meta property="og:image" content="https://kedi.is-serious.business/9gGwcJT.png">
+    <meta name="theme-color" content="#080808">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="https://kedi.is-serious.business/9gGwcJT.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,70 +16,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { background-color: #080808; color: #ededed; font-family: 'Inter', sans-serif; }
-        .bento-card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
+        .bento-card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; height: 100%; }
         .bento-card:hover { border-color: #333; background: #141414; }
-        .status-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #111; }
+        /* Banner Alanı Stili */
+        .banner-area { 
+            width: 100%; 
+            height: 180px; 
+            border-radius: 24px; 
+            background: url('https://images-ext-1.discordapp.net/external/q5kyiabyVI4605QkUksum6y5ZgrtppcrVrmolgz3zsc/%3Fsize%3D2048/https/cdn.discordapp.com/banners/377152186234437633/b1cc8979b7ebc45303765f46fc6be1e6.webp?format=webp') center/cover no-repeat; 
+            border: 1px solid #1f1f1f; 
+        }
+        /* Tam Yuvarlak Profil ve Nokta */
+        .status-dot { width: 16px; height: 16px; border-radius: 50%; border: 3px solid #111; }
         .text-gradient { background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body class="flex justify-center items-start py-12 px-4 min-h-screen">
 
-    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="w-full max-w-4xl space-y-4">
         
-        <div class="md:col-span-2 bento-card flex flex-col md:flex-row items-center gap-8">
-            <div class="relative">
-                <img src="https://images-ext-1.discordapp.net/external/oA9b3cDJwGuaZEh0AHgcHeynVCkK6HQvva7DRsB0wOM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/377152186234437633/d95550e58ec8ed32b42a8875825e23c9.webp?format=webp" class="w-32 h-32 rounded-full border-4 border-black object-cover shadow-2xl">
-                <div id="status-indicator" class="absolute bottom-2 right-2 status-dot bg-gray-500"></div>
-            </div>
-            <div class="text-center md:text-left">
-                <div class="flex items-center gap-3 justify-center md:justify-start">
-                    <h1 class="text-4xl font-extrabold tracking-tighter text-white">kedi</h1>
-                    <span id="status-text" class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest">Checking...</span>
-                </div>
-                <p class="text-slate-400 mt-3 text-base leading-relaxed">
-                    Just a <span class="text-white font-semibold">dreamer</span> wandering through the digital space. ✨ <br>
-                    Spreading <span class="text-pink-400">good vibes</span> and creating aesthetic things with love.
-                </p>
-                <div class="mt-5 flex gap-3 justify-center md:justify-start">
-                    <a href="/dnd" class="bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full hover:scale-105 transition shadow-lg">SSS</a>
-                </div>
-            </div>
-        </div>
+        <div id="user-banner" class="banner-area shadow-2xl"></div>
 
-        <div class="bento-card flex flex-col justify-between">
-            <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Socials</h3>
-            <div class="space-y-4">
-                <a href="https://x.com/shininglikehell" target="_blank" class="flex items-center justify-between group">
-                    <span class="text-sm font-semibold group-hover:text-blue-400 transition">X / Twitter</span>
-                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
-                </a>
-                <a href="https://pinterest.com/k9d1" target="_blank" class="flex items-center justify-between group">
-                    <span class="text-sm font-semibold group-hover:text-red-500 transition">Pinterest</span>
-                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
-                </a>
-                <a href="https://github.com/330" target="_blank" class="flex items-center justify-between group">
-                    <span class="text-sm font-semibold group-hover:text-purple-400 transition">GitHub</span>
-                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
-                </a>
-                <a href="https://discord.com/users/377152186234437633" target="_blank" class="flex items-center justify-between group">
-                    <span class="text-sm font-semibold group-hover:text-[#5865F2] transition">Discord</span>
-                    <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="md:col-span-3 bento-card">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest">Listening Experience</h3>
-                <a href="https://open.spotify.com/user/11156226173" target="_blank" class="text-[10px] text-[#1DB954] font-bold hover:underline">OPEN SPOTIFY</a>
-            </div>
-            <div id="spotify-container">
-                <div class="bg-white/[0.02] p-6 rounded-3xl flex items-center justify-center border border-white/5">
-                    <p class="text-sm text-slate-600 italic">Not listening to anything right now...</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <div class="md:col-span-2 bento-card flex flex-col md:flex-row items-center gap-8">
+                <div class="relative inline-flex">
+                    <img id="discord-avatar" src="https://images-ext-1.discordapp.net/external/oA9b3cDJwGuaZEh0AHgcHeynVCkK6HQvva7DRsB0wOM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/377152186234437633/d95550e58ec8ed32b42a8875825e23c9.webp?format=webp" class="w-32 h-32 rounded-full border-4 border-black object-cover shadow-2xl block">
+                    <div id="status-indicator" class="absolute bottom-1 right-1 status-dot bg-gray-500"></div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="flex items-center gap-3 justify-center md:justify-start">
+                        <h1 class="text-4xl font-extrabold tracking-tighter text-white">kedi</h1>
+                        <span id="status-text" class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest">Checking...</span>
+                    </div>
+  <p class="text-slate-400 mt-3 text-base leading-relaxed">
+    digital <span class="text-white font-semibold">minimalist</span> and a dream chaser. 🌙 <br>
+    building <span class="text-pink-400">aesthetic</span> things while listening to life. 
+</p>
+                    <div class="mt-5 flex gap-3 justify-center md:justify-start">
+                        <a href="/dnd" class="bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full hover:scale-105 transition shadow-lg">SSS</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="bento-card flex flex-col justify-between">
+                <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Socials</h3>
+                <div class="space-y-4">
+                    <a href="https://x.com/shininglikehell" target="_blank" class="flex items-center justify-between group">
+                        <span class="text-sm font-semibold group-hover:text-blue-400 transition">X / Twitter</span>
+                        <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                    </a>
+                    <a href="https://pinterest.com/k9d1" target="_blank" class="flex items-center justify-between group">
+                        <span class="text-sm font-semibold group-hover:text-red-500 transition">Pinterest</span>
+                        <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                    </a>
+                    <a href="https://github.com/330" target="_blank" class="flex items-center justify-between group">
+                        <span class="text-sm font-semibold group-hover:text-purple-400 transition">GitHub</span>
+                        <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                    </a>
+                    <a href="https://discord.com/users/377152186234437633" target="_blank" class="flex items-center justify-between group">
+                        <span class="text-sm font-semibold group-hover:text-[#5865F2] transition">Discord</span>
+                        <span class="text-slate-600 group-hover:translate-x-1 transition-transform">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 bento-card">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest">Listening Experience</h3>
+                    <a href="https://open.spotify.com/user/11156226173" target="_blank" class="text-[10px] text-[#1DB954] font-bold hover:underline">OPEN SPOTIFY</a>
+                </div>
+                <div id="spotify-container">
+                    <div class="bg-white/[0.02] p-6 rounded-3xl flex items-center justify-center border border-white/5">
+                        <p class="text-sm text-slate-600 italic">Not listening to anything right now...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script>
@@ -89,11 +103,25 @@
                 const r = await fetch(`https://api.lanyard.rest/v1/users/${userID}`);
                 const { data } = await r.json();
                 
+                // Banner ve Avatar Güncelleme
+                const banner = document.getElementById('user-banner');
+                const avatar = document.getElementById('discord-avatar');
                 const indicator = document.getElementById('status-indicator');
                 const statusText = document.getElementById('status-text');
                 const colors = { online: 'bg-green-500', idle: 'bg-yellow-500', dnd: 'bg-red-500', offline: 'bg-gray-500' };
                 
-                indicator.className = `absolute bottom-2 right-2 status-dot ${colors[data.discord_status] || 'bg-gray-500'}`;
+                // Discord'dan Banner Çekme
+                if(data.discord_user.banner) {
+                    const extension = data.discord_user.banner.startsWith("a_") ? "gif" : "png";
+                    banner.style.backgroundImage = `url('https://cdn.discordapp.com/banners/${userID}/${data.discord_user.banner}.${extension}?size=1024')`;
+                }
+
+                // Discord'dan Avatar Çekme
+                if(data.discord_user.avatar) {
+                    avatar.src = `https://cdn.discordapp.com/avatars/${userID}/${data.discord_user.avatar}.png?size=256`;
+                }
+
+                indicator.className = `absolute bottom-1 right-1 status-dot ${colors[data.discord_status] || 'bg-gray-500'}`;
                 statusText.innerText = data.discord_status;
 
                 const spotifyContainer = document.getElementById('spotify-container');
@@ -103,7 +131,7 @@
                             <img src="${data.spotify.album_art_url}" class="w-20 h-20 rounded-xl shadow-lg">
                             <div class="overflow-hidden">
                                 <p class="text-[10px] text-[#1DB954] font-black uppercase tracking-widest mb-1">Playing Now</p>
-                               <p class="text-xl font-bold text-white truncate">${data.spotify.song || data.spotify.track}</p>
+                                <p class="text-xl font-bold text-white truncate">${data.spotify.song || data.spotify.track}</p>
                                 <p class="text-sm text-slate-400 truncate">by ${data.spotify.artist}</p>
                             </div>
                         </div>
