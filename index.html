@@ -22,11 +22,12 @@
             width: 100%; 
             height: 180px; 
             border-radius: 24px; 
-            background: url('https://images-ext-1.discordapp.net/external/6V-9qqDzCMQz8K2ATsMRw6T5ZxL-tFQCMvV1XA8k30I/%3Fsize%3D2048/https/cdn.discordapp.com/banners/377152186234437633/aa792a4958d32601de87611a25658322.webp?format=webp') center/cover no-repeat; 
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             border: 1px solid #1f1f1f; 
         }
         .status-dot { width: 16px; height: 16px; border-radius: 50%; border: 3px solid #111; }
-        .text-gradient { background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body class="flex justify-center items-start py-12 px-4 min-h-screen">
@@ -39,7 +40,7 @@
             
             <div class="md:col-span-2 bento-card flex flex-col md:flex-row items-center gap-8">
                 <div class="relative inline-flex">
-                    <img id="discord-avatar" src="https://images-ext-1.discordapp.net/external/oA9b3cDJwGuaZEh0AHgcHeynVCkK6HQvva7DRsB0wOM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/377152186234437633/d95550e58ec8ed32b42a8875825e23c9.webp?format=webp" class="w-32 h-32 rounded-full border-4 border-black object-cover shadow-2xl block">
+                    <img id="discord-avatar" src="" class="w-32 h-32 rounded-full border-4 border-black object-cover shadow-2xl block bg-[#111]">
                     <div id="status-indicator" class="absolute bottom-1 right-1 status-dot bg-gray-500"></div>
                 </div>
                 <div class="text-center md:text-left">
@@ -47,10 +48,10 @@
                         <h1 class="text-4xl font-extrabold tracking-tighter text-white">kedi</h1>
                         <span id="status-text" class="text-[10px] px-2 py-0.5 rounded bg-white/5 text-slate-500 uppercase font-bold tracking-widest">Checking...</span>
                     </div>
-  <p class="text-slate-400 mt-3 text-base leading-relaxed">
-    digital <span class="text-white font-semibold">minimalist</span> and a dream chaser. 🌙 <br>
-    building <span class="text-pink-400">aesthetic</span> things while listening to life. 
-</p>
+                    <p class="text-slate-400 mt-3 text-base leading-relaxed">
+                        digital <span class="text-white font-semibold">minimalist</span> and a dream chaser. 🌙 <br>
+                        building <span class="text-pink-400">aesthetic</span> things while listening to life. 
+                    </p>
                     <div class="mt-5 flex gap-3 justify-center md:justify-start">
                         <a href="/dnd" class="bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full hover:scale-105 transition shadow-lg">SSS</a>
                     </div>
@@ -82,7 +83,7 @@
             <div class="md:col-span-3 bento-card">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-slate-500 text-xs font-bold uppercase tracking-widest">Listening Experience</h3>
-                    <a href="https://open.spotify.com/user/11156226173" target="_blank" class="text-[10px] text-[#1DB954] font-bold hover:underline">OPEN SPOTIFY</a>
+                    <a href="https://open.spotify.com" target="_blank" class="text-[10px] text-[#1DB954] font-bold hover:underline">OPEN SPOTIFY</a>
                 </div>
                 <div id="spotify-container">
                     <div class="bg-white/[0.02] p-6 rounded-3xl flex items-center justify-center border border-white/5">
@@ -96,27 +97,28 @@
 
     <script>
         const userID = "377152186234437633";
+
         async function fetchPresence() {
             try {
                 const r = await fetch(`https://api.lanyard.rest/v1/users/${userID}`);
                 const { data } = await r.json();
                 
-                // Banner ve Avatar Güncelleme
                 const banner = document.getElementById('user-banner');
                 const avatar = document.getElementById('discord-avatar');
                 const indicator = document.getElementById('status-indicator');
                 const statusText = document.getElementById('status-text');
                 const colors = { online: 'bg-green-500', idle: 'bg-yellow-500', dnd: 'bg-red-500', offline: 'bg-gray-500' };
                 
-                // Discord'dan Banner Çekme
+                // Banner Güncelleme (GIF Kontrolü)
                 if(data.discord_user.banner) {
-                    const extension = data.discord_user.banner.startsWith("a_") ? "gif" : "png";
-                    banner.style.backgroundImage = `url('https://cdn.discordapp.com/banners/${userID}/${data.discord_user.banner}.${extension}?size=1024')`;
+                    const ext = data.discord_user.banner.startsWith("a_") ? "gif" : "png";
+                    banner.style.backgroundImage = `url('https://cdn.discordapp.com/banners/${userID}/${data.discord_user.banner}.${ext}?size=1024')`;
                 }
 
-                // Discord'dan Avatar Çekme
+                // Avatar (PP) Güncelleme (GIF Kontrolü)
                 if(data.discord_user.avatar) {
-                    avatar.src = `https://cdn.discordapp.com/avatars/${userID}/${data.discord_user.avatar}.png?size=256`;
+                    const ext = data.discord_user.avatar.startsWith("a_") ? "gif" : "png";
+                    avatar.src = `https://cdn.discordapp.com/avatars/${userID}/${data.discord_user.avatar}.${ext}?size=256`;
                 }
 
                 indicator.className = `absolute bottom-1 right-1 status-dot ${colors[data.discord_status] || 'bg-gray-500'}`;
@@ -129,7 +131,7 @@
                             <img src="${data.spotify.album_art_url}" class="w-20 h-20 rounded-xl shadow-lg">
                             <div class="overflow-hidden">
                                 <p class="text-[10px] text-[#1DB954] font-black uppercase tracking-widest mb-1">Playing Now</p>
-                                <p class="text-xl font-bold text-white truncate">${data.spotify.song || data.spotify.track}</p>
+                                <p class="text-xl font-bold text-white truncate">${data.spotify.song}</p>
                                 <p class="text-sm text-slate-400 truncate">by ${data.spotify.artist}</p>
                             </div>
                         </div>
@@ -143,6 +145,7 @@
                 }
             } catch (e) { console.error("Lanyard error", e); }
         }
+
         fetchPresence();
         setInterval(fetchPresence, 10000);
     </script>
