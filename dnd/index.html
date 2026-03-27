@@ -1,127 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kedi | Contact & FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kedi | Contact & FAQ</title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="kedi | Contact & FAQ">
-<meta property="og:description" content="Read this before messaging me. Time matters. ✨">
-<meta property="og:image" content="https://kedi.is-serious.business/qzQX1GY.png">
-<meta name="theme-color" content="#050505">
-<link rel="icon" type="image/png" href="https://kedi.is-serious.business/qzQX1GY.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="kedi | Contact & FAQ">
+    <meta property="og:description" content="Read this before messaging me. Time matters. ✨">
+    <meta property="og:image" content="https://kedi.is-serious.business/qzQX1GY.png">
+    <meta name="theme-color" content="#050505">
+    <link rel="icon" type="image/png" href="https://kedi.is-serious.business/qzQX1GY.png">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<style>
-body { 
-  background:#050505; 
-  color:#e5e5e5; 
-  font-family:'Inter',sans-serif;
-}
+    <style>
+        body { background:#050505; color:#ededed; font-family:'Inter',sans-serif; overflow-x: hidden; }
+        
+        .aura {
+            position: fixed; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.1), transparent 70%);
+            filter: blur(100px); z-index: 0; pointer-events: none;
+        }
 
-.card { 
-  background:rgba(15,15,15,0.65); 
-  backdrop-filter: blur(25px); 
-  border:1px solid #1c1c1c; 
-  border-radius:20px; 
-  padding:20px; 
-  transition:.3s;
-}
+        .card { 
+            background: rgba(15, 15, 15, 0.6); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.03); 
+            border-radius: 28px; 
+            padding: 28px; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        
+        .card:hover { 
+            border-color: rgba(173, 216, 230, 0.15); 
+            background: rgba(20, 20, 20, 0.8); 
+            transform: translateY(-2px);
+        }
 
-.card:hover { 
-  background:#141414; 
-  border-color:#2a2a2a; 
-}
+        .line-accent { width: 4px; height: 22px; border-radius: 10px; background: rgba(173, 216, 230, 0.5); }
 
-.aura {
-  position:fixed;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle, rgba(173,216,230,0.2), transparent 70%);
-  filter:blur(120px);
-  z-index:0;
-}
-
-</style>
+        @keyframes pulse-aura {
+            0% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0.6; }
+        }
+        .animate-aura { animation: pulse-aura 10s infinite ease-in-out; }
+    </style>
 </head>
 
-<body class="flex justify-center items-start py-12 px-4 min-h-screen">
+<body class="flex justify-center items-start py-16 px-6 min-h-screen relative">
 
-<div class="aura top-20 left-20"></div>
-<div class="aura bottom-10 right-20"></div>
+    <div class="aura top-[-10%] left-[-10%] animate-aura"></div>
+    <div class="aura bottom-[-10%] right-[-10%] animate-aura" style="background: radial-gradient(circle, rgba(173, 216, 230, 0.05), transparent 70%);"></div>
 
-<div class="w-full max-w-3xl space-y-6 relative z-10">
+    <div class="w-full max-w-2xl space-y-8 relative z-10">
 
-<!-- HEADER -->
-<div class="card flex flex-col items-center text-center gap-4">
-<img src="https://cdn.discordapp.com/avatars/377152186234437633/d95550e58ec8ed32b42a8875825e23c9.png?size=256" class="w-24 h-24 rounded-full">
-<div>
-<h1 class="text-3xl font-extrabold">Contact & FAQ</h1>
-<p class="text-gray-500 text-sm mt-1">İletişim & SSS • Be direct, clear, concise</p>
-</div>
-</div>
+        <div class="card flex flex-col items-center text-center gap-6 p-12">
+            <img src="https://cdn.discordapp.com/avatars/377152186234437633/d95550e58ec8ed32b42a8875825e23c9.png?size=256" class="w-28 h-28 rounded-full border border-white/5 shadow-2xl">
+            <div>
+                <h1 class="text-4xl font-extrabold tracking-tighter text-white">Contact & FAQ</h1>
+                <p class="text-slate-500 text-sm mt-3 font-bold uppercase tracking-[0.2em] italic">
+                    Be direct and clear • <span class="text-slate-600">Net ve açık olun.</span>
+                </p>
+            </div>
+        </div>
 
-<!-- GENERAL -->
-<div class="card">
-<h2 class="font-bold text-lg mb-4">General Info • Genel Bilgiler</h2>
+        <div class="card">
+            <h2 class="text-white font-bold text-xl mb-6 flex items-center gap-4">
+                <div class="line-accent"></div> General Info | Genel Bilgiler
+            </h2>
+            <div class="space-y-4">
+                <div class="p-6 bg-white/[0.02] rounded-2xl border border-white/5">
+                    <p class="text-base text-slate-200 leading-relaxed">
+                        <span class="text-blue-200/60 font-bold block mb-1">EN:</span>
+                        None of my accounts or usernames are for sale. Do not offer.
+                    </p>
+                </div>
+                <div class="p-6 bg-white/[0.02] rounded-2xl border border-white/5">
+                    <p class="text-base text-slate-200 leading-relaxed">
+                        <span class="text-blue-200/60 font-bold block mb-1">TR:</span>
+                        Hiçbir hesabım veya kullanıcı adım satılık değildir. Teklif vermeyin.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-<div class="space-y-4">
-<div class="p-4 bg-white/[0.03] rounded-xl border border-white/5">
-<p class="text-xs text-blue-400 mb-1">TR</p>
-<p class="text-sm text-gray-300">Hesaplarım satılık değildir.</p>
-</div>
+        <div class="card">
+            <h2 class="text-white font-bold text-xl mb-6 flex items-center gap-4">
+                <div class="line-accent"></div> How to Ask | Nasıl Sormalısın?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-red-500/5 rounded-2xl border border-red-500/10 transition-all hover:bg-red-500/10">
+                    <p class="text-xs font-black text-red-400 uppercase tracking-widest mb-4 italic opacity-80">WRONG | YANLIŞ</p>
+                    <p class="text-slate-400 text-base leading-relaxed">
+                        Saying "Hi", "Hello", or "Can I ask something?" without stating your point.
+                    </p>
+                </div>
+                <div class="p-6 bg-green-500/5 rounded-2xl border border-green-500/10 transition-all hover:bg-green-500/10">
+                    <p class="text-xs font-black text-green-400 uppercase tracking-widest mb-4 opacity-80">RIGHT | DOĞRU</p>
+                    <p class="text-slate-100 text-base leading-relaxed font-semibold">
+                        State your problem, request, or question directly in the very first message.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 p-6 text-center border-t border-white/5">
+                <p class="text-base text-slate-400 leading-relaxed font-medium">
+                    "Hi, I'm having trouble with [X]..." → <span class="text-green-400 font-bold">Great!</span> <br>
+                    <span class="text-slate-500">"Selam, [X] konusunda bir sorun yaşıyorum..." → <span class="text-green-500 font-bold">Harika!</span></span>
+                </p>
+            </div>
+        </div>
 
-<div class="p-4 bg-white/[0.03] rounded-xl border border-white/5">
-<p class="text-xs text-blue-400 mb-1">EN</p>
-<p class="text-sm text-gray-300">None of my accounts are for sale.</p>
-</div>
-</div>
-</div>
+        <div class="card">
+            <h2 class="text-white font-bold text-xl mb-6 flex items-center gap-4">
+                <div class="line-accent"></div> Priority | Öncelikler
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-center gap-5 p-5 hover:bg-white/[0.02] rounded-2xl transition border border-transparent hover:border-white/5">
+                    <span class="text-blue-300/40 font-black text-lg">01</span>
+                    <p class="text-base font-medium text-slate-300">Research First • <span class="text-slate-500">Önce Araştır</span></p>
+                </div>
+                <div class="flex items-center gap-5 p-5 hover:bg-white/[0.02] rounded-2xl transition border border-transparent hover:border-white/5">
+                    <span class="text-blue-300/40 font-black text-lg">02</span>
+                    <p class="text-base font-medium text-slate-300">No Spam • <span class="text-slate-500">Gereksiz Mesaj Atma</span></p>
+                </div>
+            </div>
+        </div>
 
-<!-- HOW TO ASK -->
-<div class="card">
-<h2 class="font-bold text-lg mb-4">How to Ask • Nasıl Sormalısın</h2>
+        <footer class="text-center py-12 space-y-6">
+            <a href="/" class="inline-block text-xs font-black text-slate-400 hover:text-white transition uppercase tracking-[0.3em] bg-white/5 px-10 py-4 rounded-full border border-white/5 hover:bg-white/10 hover:scale-105">
+                ← Back to Space
+            </a>
+            <p class="text-[10px] text-white/10 font-medium tracking-[0.2em] uppercase">© 2026 kedi | wandering in digital space</p>
+        </footer>
 
-<div class="grid md:grid-cols-2 gap-4">
-<div class="p-4 bg-red-500/5 border border-red-500/10 rounded-xl text-center">
-<p class="text-xs text-red-400 uppercase">Wrong • Yanlış</p>
-<p class="text-gray-500 text-sm mt-2 italic">"Hi", "help", "are you there?"</p>
-</div>
-
-<div class="p-4 bg-green-500/5 border border-green-500/10 rounded-xl text-center">
-<p class="text-xs text-green-400 uppercase">Right • Doğru</p>
-<p class="text-white text-sm mt-2">State your problem directly</p>
-<p class="text-gray-500 text-xs">Sorunu direkt yaz</p>
-</div>
-</div>
-
-<div class="mt-4 text-xs text-gray-500 space-y-2">
-<p><strong>TR:</strong> Sadece "selam" yazarsan gecikebilir. Direkt sorunu yazarsan hızlı cevap alırsın.</p>
-<p><strong>EN:</strong> If you just say "hi", it may take longer. Be direct to get faster replies.</p>
-</div>
-</div>
-
-<!-- RULES -->
-<div class="card">
-<h2 class="font-bold text-lg mb-4">Priority • Öncelik</h2>
-
-<div class="space-y-3 text-sm text-gray-400">
-<p>• <strong>Research:</strong> Google first • Önce araştır</p>
-<p>• <strong>No spam:</strong> Gereksiz DM atma</p>
-<p>• <strong>Be clear:</strong> Net ol</p>
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer class="text-center py-6">
-<a href="/" class="text-xs text-gray-500 hover:text-white uppercase">← Back to Space</a>
-<p class="text-[10px] text-gray-700 mt-4 uppercase">© 2026 kedi</p>
-</footer>
-
-</div>
+    </div>
 
 </body>
 </html>
